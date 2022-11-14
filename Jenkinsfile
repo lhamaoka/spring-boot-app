@@ -3,7 +3,8 @@ pipeline {
         node {
             label "nodo-java"
         }
-    }    stages{
+    }    
+    stages{
         stage("Build"){
             steps{
                 sh "mvn clean package -DskipTests"
