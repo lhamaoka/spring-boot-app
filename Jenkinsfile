@@ -39,7 +39,8 @@ pipeline {
                     artifactExists = fileExists artifactPath                    
 		   if(artifactExists) {
                         echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version ${pom.version}"
-                        versionPom = "${pom.version}"                        nexusArtifactUploader(
+                        versionPom = "${pom.version}"                        
+		   nexusArtifactUploader(
                             nexusVersion: NEXUS_VERSION,
                             protocol: NEXUS_PROTOCOL,
                             nexusUrl: NEXUS_URL,
