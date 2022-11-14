@@ -11,7 +11,7 @@ pipeline {
         NEXUS_URL = "192.168.85.6:8081"
         NEXUS_REPOSITORY = "bootcamp"
         NEXUS_CREDENTIAL_ID = "nexus-user"
-        DOCKERHUB_CREDENTIALS=credentials("lhamaoka")
+        DOCKERHUB_CREDENTIALS=credentials("docker-user-id")
         DOCKER_IMAGE_NAME="lhamaoka/spring-boot-app"
     }    
     stages{
