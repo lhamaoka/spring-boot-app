@@ -11,7 +11,7 @@ pipeline {
                 junit "target/surefire-reports/*.xml"
             }
         }
-        stage("Build"){
+        stage("Builds"){
             steps{
                 sh "mvn clean package -DskipTests"
             }
