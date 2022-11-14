@@ -9,7 +9,7 @@ pipeline {
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "192.168.49.6:8081"
         NEXUS_REPOSITORY = "bootcamp"
-        NEXUS_CREDENTIAL_ID = "nexus"
+        NEXUS_CREDENTIAL_ID = "nexus-user"
     }    
     stages{
         stage("Tests"){
