@@ -89,9 +89,6 @@ pipeline {
     }
     post{
         always{
-            dir('configuracion') {
-                deleteDir()
-            }
             sh "docker logout"
         }
     }
