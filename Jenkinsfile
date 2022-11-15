@@ -89,7 +89,9 @@ pipeline {
     }
     post{
         always{
-            cleanWs()
+            dir('configuracion') {
+                deleteDir()
+            }
             sh "docker logout"
         }
     }
