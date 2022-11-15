@@ -72,7 +72,7 @@ pipeline {
     
         stage("Build image and push to Doker Hub"){
             steps{
-                sh "git clone https://github.com/dberenguerdevcenter/kubernetes-helm-docker-config.git configuracion --branch demo-java"
+                sh "git clone https://github.com/lhamaoka/kubernetes-helm-docker-config.git configuracion --branch demo-java"
                 sh "kubectl apply -f configuracion/kubernetes-deployments/spring-boot-app/deployment.yaml --kubeconfig=configuracion/kubernetes-config/config"
             }
         }
