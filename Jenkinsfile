@@ -72,6 +72,13 @@ pipeline {
     
         stage("Build image and push to Doker Hub"){
             steps{
+                sh "git clone https://github.com/dberenguerdevcenter/kubernetes-helm-docker-config.git configuracion --branch demo-java"
+                sh "kubectl apply -f configuracion/kubernetes-deployments/spring-boot-app/deployment.yaml --kubeconfig=configuracion/kubernetes-config/config"
+            }
+        }
+
+        stage("Deploy to K8s"){
+            steps{
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 sh "docker build -t $DOCKER_IMAGE_NAME:${versionPom} ."
                 sh "docker push $DOCKER_IMAGE_NAME:${versionPom}"
