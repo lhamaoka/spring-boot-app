@@ -1,22 +1,22 @@
 pipeline{
 
-  agent {
-      kubernetes {
-        yaml '''
-        apiVersion: v1
-        kind: Pod
-        spec:
-        containers:
-        - name: shell
-          image: lhamaoka/jenkins-nodo-java-bootcamp:1.0
-          command:
-          - sleep
-          args:
-          - infinity
-        '''
-        defaultContainer 'shell'
-      }
-  }
+    agent {
+        kubernetes {
+            yaml '''
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: shell
+    image: lhamaoka/jenkins-nodo-java-bootcamp:1.0
+    command:
+    - sleep
+    args:
+    - infinity
+'''
+            defaultContainer 'shell'
+        }
+    }
 
   environment {
     registryCredential='docker-hub-credentials'
