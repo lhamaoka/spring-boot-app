@@ -8,7 +8,17 @@ kind: Pod
 spec:
   containers:
   - name: shell
-    image: lhamaoka/jenkins-nodo-java-bootcamp:1.0
+    image: lhamaoka/jenkins-nodo-nodejs-bootcamp:1.0
+    volumeMounts:
+    - mountPath: /var/run/docker.sock
+      name: docker-socket-volume
+    securityContext:
+      privileged: true
+  volumes:
+  - name: docker-socket-volume
+    hostPath:
+      path: /var/run/docker.sock
+      type: Socket
     command:
     - sleep
     args:
