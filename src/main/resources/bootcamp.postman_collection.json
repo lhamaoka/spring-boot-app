@@ -64,10 +64,10 @@
           "raw": "{\r\n    \"title\": \"api-test\",\r\n    \"description\": \"api-test\",\r\n    \"published\": true\r\n}"
         },
         "url": {
-          "raw": "https://cyan-maps-attack-213-0-57-163.loca.lt/api/tutorials",
+          "raw": "https://https://dull-socks-enter-213-0-57-163.loca.lt/api/tutorials",
           "protocol": "https",
           "host": [
-            "cyan-maps-attack-213-0-57-163",
+            "dull-socks-enter-213-0-57-163",
             "loca",
             "lt"
           ],
