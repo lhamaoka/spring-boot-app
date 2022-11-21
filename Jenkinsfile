@@ -1,4 +1,5 @@
 pipeline{
+
     agent {
         kubernetes {
             yaml '''
@@ -68,7 +69,7 @@ spec:
             sh 'rm -r configuracion'
           }
         }
-        sh "git clone https://github.com/lhamaoka/kubernetes-helm-docker-config.git configuracion --branch demo-java"
+        sh "git clone https://github.com/lhamaoka/kubernetes-helm-docker-config.git configuracion --branch test-implementation"
         sh "kubectl apply -f configuracion/kubernetes-deployments/spring-boot-app/deployment.yaml --kubeconfig=configuracion/kubernetes-config/config"
       }
 
