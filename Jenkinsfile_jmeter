@@ -57,6 +57,7 @@ spec:
                        }
                        sh 'apt-get install wget'
                        sh 'apt-get install python3-pip -y'
+                       sh 'pip install bzt'
                        sh 'wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.5.tgz'
                        sh 'tar xvf apache-jmeter-5.5.tgz'
                        sh 'cp plugins/*.jar apache-jmeter-5.5/lib/ext'
